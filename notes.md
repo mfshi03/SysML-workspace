@@ -19,8 +19,6 @@ conda search graphviz --channel conda-forge
 conda env list
 
 
-
-
 ### SysML Repos
 
 https://github.com/conda-forge/jupyter-sysml-kernel-feedstock/tree/main

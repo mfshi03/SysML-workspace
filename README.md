@@ -1,6 +1,5 @@
 # SysML-workspace
-Some notes and examples for SysML Kernels
-
+SysML Kernel Examples w/ Visualization
 
 ### Getting Started
 
