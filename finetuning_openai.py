@@ -1,15 +1,18 @@
-from openai import OpenAI
-client = OpenAI()
+import openai
+import os
+from dotenv import load_dotenv
 
-client.files.create(
-  file=open("data/finetune.jsonl", "rb"),
-  purpose="fine-tune"
-)
+def create_fine_tune():
+  client = openai.OpenAI()
+  client.files.create(
+    file=open("data/finetune.jsonl", "rb"),
+    purpose="fine-tune"
+  )
 
-client.fine_tuning.jobs.create(
-  training_file="file-abc123", 
-  model="gpt-3.5-turbo"
-)
+  client.fine_tuning.jobs.create(
+    training_file="file-abc123", 
+    model="gpt-3.5-turbo"
+  )
 
 
 # List 10 fine-tuning jobs
@@ -28,12 +31,16 @@ def fine_tuning_funcs():
   # Delete a fine-tuned model (must be an owner of the org the model was created in)
   client.models.delete("ft:gpt-3.5-turbo:acemeco:suffix:abc123")
 
+load_dotenv()
+openai.api_key = os.getenv("OPENAI_KEY")
 
-response = client.chat.completions.create(
-  model="ft:gpt-3.5-turbo:my-org:custom_suffix:id",
+response = openai.ChatCompletion.create(
+  model="ft:gpt-3.5-turbo-0613:credits::8YHIXDx8",
   messages=[
-    {"role": "system", "content": "You are a helpful assistant."},
-    {"role": "user", "content": "Hello!"}
+    {"role": "system", "content": "SystemGPT is a chatbot that evaluate master plans in the form: UGV(unmanned grounded vehicle) must traverse a [rough] terrain to complete its mission in [x] hours and [y] lifetime cycles."},
+    {"role": "user", "content": "UGV must traverse a beach terrain to complete its mission in 5 hours and 100 lifetime cycles."}
   ]
 )
-print(completion.choices[0].message)
+
+print(response)
+print(response.choices[0]["message"]["content"])
