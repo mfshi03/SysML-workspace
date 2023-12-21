@@ -2,7 +2,7 @@ from openai import OpenAI
 client = OpenAI()
 
 client.files.create(
-  file=open("mydata.jsonl", "rb"),
+  file=open("data/finetune.jsonl", "rb"),
   purpose="fine-tune"
 )
 
