@@ -10,6 +10,7 @@
 ### Personal Objectives 
 - Work on refining the fine-tune model with better examples to improve analysis quality
 - Use analysis as input for building python unit tests 
-- 
 
+
+### Schedule 
 
