@@ -10,6 +10,15 @@
 ### Personal Objectives 
 - Work on refining the fine-tune model with better examples to improve analysis quality
 - Use analysis as input for building python unit tests 
+- SysML Models should be a good evaluator for SysMLv2 Code given enough training
+
+
+Annotations 
+
+Get SysML LLM to work for specific subset of SysMLv2 
+- Block def diagrams
+- Internal block diagrams
+- Activities and Activity Diagrams
 
 
 ### Schedule 

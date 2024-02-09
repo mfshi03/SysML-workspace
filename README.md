@@ -12,6 +12,8 @@ Along with setting up a conda environment for sysml via `conda create --name sys
 
 ### Installation Troubleshooting
 
+For installation, you should probably use the one located in this repo and running 
+./install.sh 
 If your versions don't resolve, you can modify the following line in install.sh
 
 ```xs

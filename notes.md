@@ -25,6 +25,9 @@ conda env list
 https://github.com/conda-forge/jupyter-sysml-kernel-feedstock/tree/main
 https://github.com/Systems-Modeling/SysML-v2-Pilot-Implementation/tree/master/sysml/src/examples
 https://github.com/MBSE4U/SysMLv2JupyterBook/blob/master/SysMLv2JupyterBook.ipynb
+https://github.com/Systems-Modeling/SysML-v2-Release/tree/master/sysml/src/examples/Vehicle%20Example
+
+[SysMLv2 Spec](https://www.omg.org/spec/SysML/2.0/Beta1/Language/PDF)
 
 ### SysMLv2 Generator
 https://chat.openai.com/g/g-JscUy4mkm-sysmlv2-generator
