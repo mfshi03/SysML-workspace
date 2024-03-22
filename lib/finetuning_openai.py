@@ -37,7 +37,7 @@ def fine_tuning_funcs():
   client.models.delete("ft:gpt-3.5-turbo:acemeco:suffix:abc123")
 
 stuff = '''
-This is an example of valid SysMLv2 code for an Electric Vehicle:
+Write verification tests for this.
 package eVehicle_LogicalArchitecture {   
 
     import SI::*;        
@@ -103,11 +103,21 @@ package eVehicle_LogicalArchitecture {
 
 '''
 
+'''
 response = client.chat.completions.create(
-  model="ft:gpt-3.5-turbo-0613:credits::8YHIXDx8",
+  model= "ft:gpt-3.5-turbo-0613:credits:sysml:95cxDNTq",
   messages=[
     {"role": "system", "content": "SystemGPT is a chatbot that evaluate master plans in the form: UGV(unmanned grounded vehicle) must traverse a [rough] terrain to complete its mission in [x] hours and [y] lifetime cycles."},
     {"role": "user", "content": f"Write SysMLv2 code for a UG that must traverse a mountainous rocky terrain with ice to complete its mission in 5 hours and 100 lifetime cycles. Here is example an SysMLv2 code you should use: {stuff}"}
+  ]
+)
+'''
+
+response = client.chat.completions.create(
+  model= "ft:gpt-3.5-turbo-0613:credits:sysml:95cxDNTq",
+  messages=[
+    {"role": "system", "content": "SysMLv2 Analysis System is a chatbot that evaluate master plans in the form of SysMLv2 code"},
+    {"role": "user", "content": f"Write SysMLv2 code to test the following code: {stuff}"}
   ]
 )
 
